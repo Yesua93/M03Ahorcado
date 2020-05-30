@@ -1,0 +1,26 @@
+
+
+#Execute this:
+Cambia de directorio hacia src
+cd src/
+
+Compila las fuentes y linka el codigo objeto en el compilador para generar el binario
+gcc -c main.c functions.c functions.h          
+gcc main.o functions.o functions.h -o bin/Ahorcado.bin
+
+Copia el fichero de palabras donde se ha generado el binario
+cp -a ./WORDS.txt bin
+
+Borra los codigos objetos creados en la compilacion
+rm main.o 
+rm functions.o 
+rm functions.h.* 
+
+Da permisos de ejecucion al binario
+chmod +x ./src/bin/Ahorcado.bin
+
+Executable is located in ./src/bin/Ahorcado.bin
+
+Nota:
+En la raiz del proyecto te he dejado fuera de la carpeta src un directorio llamado BinarioCompilado que contiene el binario del código.
+utiliza las instrucciones de arriba solo si quieres compilarlo por ti mismo.
